@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - in next js file based routing works
 - Static Routing
     - Create the any file name with js extensino inside the pages folder and navigate to the file name in url, For example  http://localhost:3000/about 
-    ```
+    ```javascript
     function About() {
         return (
             <h1>About page</h1>
@@ -50,7 +50,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - Folder Path will be
        - Pages/product
             - [productId].js
-    ```
+    ```javascript
     import { useRouter } from 'next/router';
     function ProductDetails() {
         const router = useRouter();
@@ -67,7 +67,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
             - [productId]
                 - review
                     - [reviewId].js
-    ```
+    ```javascript
     import { useRouter } from "next/router";
     function ReviewDetails() {
         const router = useRouter();
@@ -87,7 +87,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - But the above routes will not handle the http://localhost:3000/docs, it will throw the error for page not found.
     - We can create the optional routing as [[...params]].js so it will handle the main page as well for example: http://localhost:3000/docs
     
-    ```
+    ```javascript
     import { useRouter } from 'next/router';
     function Doc() {
         const router = useRouter();
