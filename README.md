@@ -107,3 +107,68 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
     export default Doc;
     ```
+
+## Link Component navigation
+    ```javascript
+    import Link from 'next/link';
+    function Product({productId = 100}) {
+        return (
+            <>
+                <h2>
+                    <Link href="/product/1" legacyBehavior>
+                        <a>Product 1</a>
+                    </Link>
+                </h2>
+                <h2>
+                    <Link href="/product/2" legacyBehavior>
+                        <a>Product 2</a>
+                    </Link>
+                </h2>
+                <h2>
+                    <Link href={`/product/${productId}`} legacyBehavior>
+                        <a>Product {productId}</a>
+                    </Link>
+                </h2>
+                
+            </>
+        )
+    }
+
+    export default Product;
+    ```
+## Navigating Programmatically
+    ```javascript
+    import Link from 'next/link';
+    import { useRouter } from 'next/router';
+
+    function Home() {
+        const router = useRouter();
+        const handleClick = () => {
+            console.log("Placing your order");
+            router.push('/product');
+        }
+        return (
+            <div>
+                <h1>Home Page</h1>
+                <Link href="/blog" legacyBehavior>
+                    <a>Blog</a>
+                </Link>
+                <Link href="/product" legacyBehavior>
+                    <a>Products</a>
+                </Link>
+                <button onClick={handleClick}>Place order</button>
+            </div>
+        )
+    }
+
+    export default Home;
+    ```
+## Page not found
+   - Create 404.js file in pages folder it will handle all the page not found 
+    ```javascript
+    function PageNotFound() {
+        return <h1>404 Page with all the custom styling necessary</h1>
+    }
+    export default PageNotFound;
+
+    ```
