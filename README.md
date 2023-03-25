@@ -1,4 +1,4 @@
-# Getting Started
+## Getting Started
 First, run the development server:
 ```bash
 npm run dev
@@ -35,4 +35,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Routing
 - in next js file based routing works
--
+- Static Routing
+- - Create the any file name with js extensino inside the pages folder and navigate to the file name in url you can see the for example  http://localhost:3000/about 
+```
+function About() {
+    return (
+        <h1>About page</h1>
+    )
+}
+```
+- Dynamic Routing
+
+- Catch All Routing
