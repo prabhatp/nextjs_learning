@@ -37,13 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - in next js file based routing works
 - Static Routing
     - Create the any file name with js extensino inside the pages folder and navigate to the file name in url, For example  http://localhost:3000/about 
-```
-function About() {
-    return (
-        <h1>About page</h1>
-    )
-}
-```
+    ```
+    function About() {
+        return (
+            <h1>About page</h1>
+        )
+    }
+    ```
 - Dynamic Routing
 
 - Catch All Routing
