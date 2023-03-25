@@ -109,7 +109,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     ```
 
 ## Link Component navigation
-    ```javascript
+   ```javascript
     import Link from 'next/link';
     function Product({productId = 100}) {
         return (
