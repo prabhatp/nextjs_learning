@@ -108,8 +108,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     export default Doc;
     ```
 
-## Link Component navigation
-- Understand the Code
+- Link Component navigation
+    - Understand the Code
    ```javascript
     import Link from 'next/link';
     function Product({productId = 100}) {
@@ -137,8 +137,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
     export default Product;
     ```
-## Navigating Programmatically
-- Understand the Code
+- Navigating Programmatically
+    - Understand the Code
     ```javascript
     import Link from 'next/link';
     import { useRouter } from 'next/router';
@@ -165,8 +165,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
     export default Home;
     ```
-## Page not found
-- Create 404.js file in pages folder it will handle all the page not found 
+- Page not found
+    - Create 404.js file in pages folder it will handle all the page not found 
     ```javascript
     function PageNotFound() {
         return <h1>404 Page with all the custom styling necessary</h1>
