@@ -164,5 +164,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
     3. Dynamic routes - Can be created by adding square brackets to a page name
     4. Catch All routes - Add three dots inside square brackets to create a catch all route. Helpful when you want different URLs for the same page layout or even when you're working with pages where some of the route parameters are optional
     5. Link componetnt to navigate on click of an element
-    6. useRouter hook's __router.push__ method to navigate programmatically
+    6. useRouter hook's _router.push_ method to navigate programmatically
     7. How to create a custom 404 page
