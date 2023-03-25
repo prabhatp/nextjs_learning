@@ -49,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - Create the dynamic segement in square bracket i.e. [segement_name].js -> [productId].js For example http://localhost:3000/product/1, http://localhost:3000/product/2  
     - Folder Path will be
        - Pages/product
-         - [productId].js
+            - [productId].js
     ```
     import { useRouter } from 'next/router';
     function ProductDetails() {
@@ -64,9 +64,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - Another example, http://localhost:3000/product/1/review/2, http://localhost:3000/product/2/review/3
     - Folder Path will be
        - Pages/product/
-         - [productId]
-          - review
-           - [reviewId].js
+            - [productId]
+                - review
+                    - [reviewId].js
     ```
     import { useRouter } from "next/router";
     function ReviewDetails() {
@@ -80,10 +80,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     export default ReviewDetails;
     ```
 - Catch All Routing
-    - 
+    - To handle any routes we can use the ```...``` inside the square bracket
     - Folder Path will be
        - Pages/docs/
-        - [...params].js
+           - [...params].js
+    - But the above routes will not handle the http://localhost:3000/docs, it will throw the error for page not found.
+    - We can create the optional routing as [[...params]].js so it will handle the main page as well for example: http://localhost:3000/docs
+    
     ```
     import { useRouter } from 'next/router';
     function Doc() {
