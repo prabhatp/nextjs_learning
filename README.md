@@ -158,7 +158,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
     export default PageNotFound;
 
     ```
-    - Routing Summary
+- Routing Summary
     1. Page based routing mechanism - Pages are associated with a route based on their file name
     2. Nested routes - Nested folder structure, files will be automatically routed in the same way in the URL
     3. Dynamic routes - Can be created by adding square brackets to a page name
