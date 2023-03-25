@@ -49,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - Create the dynamic segement in square bracket i.e. [segement_name].js -> [productId].js For example http://localhost:3000/product/1, http://localhost:3000/product/2  
     - Folder Path will be
        - Pages/product
-            - [productId].js
+         - [productId].js
     ```
     import { useRouter } from 'next/router';
     function ProductDetails() {
@@ -64,9 +64,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - Another example, http://localhost:3000/product/1/review/2, http://localhost:3000/product/2/review/3
     - Folder Path will be
        - Pages/product/
-            - [productId]
-                - review
-                    - [reviewId].js
+         - [productId]
+          - review
+           - [reviewId].js
     ```
     import { useRouter } from "next/router";
     function ReviewDetails() {
@@ -80,3 +80,27 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     export default ReviewDetails;
     ```
 - Catch All Routing
+    - 
+    - Folder Path will be
+       - Pages/docs/
+        - [...params].js
+    ```
+    import { useRouter } from 'next/router';
+    function Doc() {
+        const router = useRouter();
+        const { params = [] } = router.query;
+
+        if (params.length === 2) {
+            return (
+                <h1>Viewing docs for features {params[0]} and concept {params[1]} </h1>
+            )
+        } else if (params.length === 1) {
+            return <h1>Viewing docs for features {params[0]}</h1>
+        }
+        return(
+            <h1>Docs Home Page</h1>
+        )
+    }
+
+    export default Doc;
+    ```
