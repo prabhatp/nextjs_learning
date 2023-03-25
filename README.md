@@ -109,6 +109,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     ```
 
 ## Link Component navigation
+   - 
    ```javascript
     import Link from 'next/link';
     function Product({productId = 100}) {
@@ -137,6 +138,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     export default Product;
     ```
 ## Navigating Programmatically
+   - 
     ```javascript
     import Link from 'next/link';
     import { useRouter } from 'next/router';
