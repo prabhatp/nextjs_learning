@@ -43,7 +43,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
             <h1>About page</h1>
         )
     }
+    export default About;
     ```
 - Dynamic Routing
-
+    - Create the dynamic segement in square bracket i.e. [segement_name].js -> [productId].js For example http://localhost:3000/product/1, http://localhost:3000/product/2  
+    ```
+    import { useRouter } from 'next/router';
+    function ProductDetails() {
+        const router = useRouter();
+        const { productId } = router.query;
+        return(
+            <h1>Product Details for {productId}</h1>
+        )
+    }
+    export default ProductDetails;
+    ```
 - Catch All Routing
